@@ -99,7 +99,6 @@ const main = (() => {
   function toggleToComplete() {
     const listItem = this.parentNode.parentNode;
     const editButton = listItem.querySelector('.todo-edit');
-    const deleteButton = listItem.querySelector('.todo-delete');
     listItem.classList.toggle('todo-item-completed');
     const isCompleted = listItem.classList.contains('todo-item-completed');
     if (isCompleted) {
@@ -228,6 +227,19 @@ const main = (() => {
   }
 
   restore(load());
+
+  function checkEdit() {
+    const listItem = list.querySelectorAll('.todo-item');
+    listItem.forEach(item => {
+      const editButton = item.querySelector('.todo-edit');
+      if (item.classList.contains('todo-item-completed')) {
+        editButton.setAttribute('disabled', 'disabled');
+      } else {
+        editButton.removeAttribute('disabled');
+      }
+    });
+  }
+  checkEdit();
 
   return main;
 })();
