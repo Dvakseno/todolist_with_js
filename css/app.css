@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+input[type="text"],
+textarea{
+  color: #333;
+  border: 0;
+  outline-color: #58CC67;
+  font-size: 16px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  width: 100%;
+  padding: 5px 10px;
+}
+textarea{
+  resize: none;
+  height: 100px;
+}
+
+h1{
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 54px;
+}
+
+.container{
+  margin: 0 auto;
+  width: 480px;
+}
+
+.todo-body{
+  background-color: #007ACC;
+}
+.todo-list{
+  padding: 10px 10px 20px;
+  margin: 0;
+}
+.todo-item{
+  list-style-type: none;
+}
+.todo-item:not(:last-child){
+  padding-bottom: 10px;
+}
+.todo-item-checkbox{
+  margin: 0;
+}
+.todo-item-title{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.todo-item-description{
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+.todo-btns{
+  text-align: right;
+  font-size: 0;
+}
+.todo-btn{
+  border: 0;
+  padding: 5px 25px;
+  font-size: 18px;
+  font-family: 'Raleway', 'Arial', sans-serif;
+  cursor: pointer;
+  background-color: #58CC67;
+  color: #fff;
+}
+.todo-edit{
+  margin-right: 5px;
+}
+.todo-btn:hover{
+  background-color: #5EDB6F;
+}
+.todo-btn:active{
+  background-color: #4EB55C;
+}
+.todo-btn:disabled{
+  background-color: #9AD5A2;
+  color: #B9D5BD;
+  text-decoration: line-through;
+  cursor: default;
+}
+
+.todo-item-completed .todo-item-label,
+.todo-item-completed .todo-item-description{
+  text-decoration: line-through;
+  color: #ffffff81;
+}
+.todo-item-label{
+  margin-left: 5px;
+}
+
+.todo-add{
+  padding: 20px 10px 10px;
+  border-top: 5px solid #1E1E1E;
+}
+.todo-add-title,
+.todo-add-subject{
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+}
+.todo-add-title{
+  margin-bottom: 10px;
+}
+.todo-add-subject{
+  margin-bottom: 10px;
+}
+
+.todo-item-label-change{
+  margin-bottom: 5px;
+  display: none;
+}
+.todo-item-description-change{
+  margin-bottom: 10px;
+  display: none;
+}
+
+.todo-item.editing .todo-item-checkbox,
+.todo-item.editing .todo-item-label,
+.todo-item.editing .todo-item-description{
+  display: none;
+}
+.todo-item.editing .todo-item-label-change,
+.todo-item.editing .todo-item-description-change{
+  display: block;
+}
