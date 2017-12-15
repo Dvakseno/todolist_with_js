@@ -241,6 +241,24 @@ const main = (() => {
   }
   checkEdit();
 
+  function sortFn(a, b) {
+    const f = a.title;
+    const s = b.title;
+    f.toLowerCase();
+    s.toLowerCase();
+    if (f > s) return 1;
+    if (f < s) return -1;
+    return 0;
+  }
+
+  function reverse(data) {
+    localStorage.removeItem('listWiley');
+    data.sort(sortFn);
+    data.reverse();
+    save(data);
+  }
+  reverse(data);
+
   return main;
 })();
 
